@@ -1,0 +1,55 @@
+Nathan Allen
+
+Boggle Solver
+        This program finds all words on a given 4X4 Boggle board and prints
+        them out to the terminal. It also provides the only way for a Computer
+        Science major to beat a Linguistics major at Boggle.
+
+Use Cases
+        boggle will take a file and a dictionary from the command line and
+        print out all unique words in the dictionary found on the board in a
+        human readable format:
+
+        ./boggle board dictionary
+        only
+        one
+        not
+        to
+        (etc.)
+
+Assumptions and Constraints
+        This program assumes that it is passed a file of 16 characters, each of
+        which is within the range 'a'-'z' or 'A'-'Z', or that satisfactory
+        characters are passed in the input stream.  The program will also
+        assume that it is passed a file containing a dictionary, or any amount
+        of words, all of which are lower-case. The program will end on its own
+        if the file has less characters and will ignore the remainders if it
+        has more, and it will error out if any of the 16 characters is not in
+        the specified ranges.
+
+Architecture
+        The Boggle Board will be stored as a one dimentional array of chars. A
+        The program will also use a dictionary, which will be represented
+        by a 26 branch trie. Each node will contain two booleans, one
+        signaling if this node is a leaf, and one signalling if it is an end
+        of a word, and a 26 element array storing pointers to nodes in the
+        trie.
+
+Implementation Plan
+        1. Write a function that copies the dictionary into a trie
+           - this will use C++'s file reading
+        2. Write functions that read in a file of 16 characters and write them
+           to a Boggle Board
+           - this will the input stream
+        3. Implement the solver
+           - the algorithm will use DFS to map over every possible string
+
+        Future Additions:
+        4. Write a Boggle Board maker that creates a board of 16 random
+           characters
+        5. Improve above maker by allowing the algorithm only as much
+           randomization as the actual game has
+           - due to the nature of the game, involving 16 unique cubes of 6
+             sides each, there is not a true 26^16 randomization that Part 4
+             implies, so this will make sure every board generated is possible
+             with an actual Boggle set
