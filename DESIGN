@@ -1,9 +1,10 @@
 Nathan Allen
 
 Boggle Solver
-        This program finds all words on a given 4X4 Boggle board and prints
-        them out to the terminal. It also provides the only way for a Computer
-        Science major to beat a Linguistics major at Boggle.
+        This program finds all words of length greater than or equal to 3
+	on a given 4X4 Boggle board and prints them out to the terminal. It
+	also provides the only way for a Computer Science major to beat a
+	Linguistics major at Boggle.
 
 Use Cases
         boggle will take a file and a dictionary from the command line and
