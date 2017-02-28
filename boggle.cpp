@@ -88,7 +88,7 @@ void check_around(Board *board, Dict *dictionary, int index,
         passed[index] = true;
 
         //print word if it is in dictionary
-        if (dictionary->hasWord(word)) {
+        if (dictionary->hasWord(word) && length >= 3) {
                 cout << word << endl;
         }
 
