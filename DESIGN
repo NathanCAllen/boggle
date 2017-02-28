@@ -45,9 +45,12 @@ Implementation Plan
            - the algorithm will use DFS to map over every possible string
 
         Future Additions:
-        4. Write a Boggle Board maker that creates a board of 16 random
+	4. Remove repeated solutions
+	   - the program will store the found words in an array before printing
+	     so there are no repetitions
+        5. Write a Boggle Board maker that creates a board of 16 random
            characters
-        5. Improve above maker by allowing the algorithm only as much
+        6. Improve above maker by allowing the algorithm only as much
            randomization as the actual game has
            - due to the nature of the game, involving 16 unique cubes of 6
              sides each, there is not a true 26^16 randomization that Part 4
